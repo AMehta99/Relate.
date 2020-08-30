@@ -109,10 +109,12 @@ def check_tickers(tickers):
                 tickerList.append(newTicker)
             else:
                 tickerList.append(ticker)
+        print(tickerList)
 
         with open("tickers.txt") as file:
             f = file.read()
-            for ticker in tickers:
+            for ticker in tickerList:
+                print(ticker)
                 if ticker not in f:
                     return False
             return True
